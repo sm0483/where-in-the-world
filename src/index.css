@@ -1,13 +1,71 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,300;0,600;0,800;1,300;1,600;1,800&display=swap');
+
+*{
+   font-family: 'Nunito Sans', sans-serif;
+   padding: 0em;
+   margin: 0em;
+   box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+:root{
+    --Dark-Blue: hsl(209, 23%, 22%);
+    --Very-Dark-Blue: hsl(207, 26%, 17%);
+    --Very-Dark-Blue-light: hsl(200, 15%, 8%);
+    --Dark-Gray-light-input: hsl(0, 0%, 52%);
+    --Very-Light-Gray: hsl(0, 0%, 98%);
+    --White: hsl(0, 0%, 100%);
 }
+
+.main-page{
+    background-color: var(--Very-Light-Gray);
+}
+
+.head-container{
+    background-color: var(--White);
+    display: flex;
+    flex-direction: row;
+    border: 1px solid whitesmoke;
+}
+
+.head-container .head-sub-container{
+    padding: 1.3em 2em 1em 2em;
+    margin: 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.head-container .head-sub-container h1{
+    font-weight: 800;
+    font-size: 1.4em;
+}
+
+
+.search-bar{
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+
+}
+
+.search-container{
+    padding: 1em;
+    margin: 0em 1em 0em 1em;
+}
+
+.search-container .search-button{
+    background-color: var(--White);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3em;
+}
+
+.search-container .search-input{
+    background-color: var(--White);
+    border: none;
+    outline: none;
+    height: 3em;
+    font-weight: 600;
+}
+
