@@ -1,18 +1,26 @@
 import {AiOutlineSearch} from 'react-icons/ai'
 
+
 const Search = () => {
     return (
-        <section className="search-container">
-            <div className="input-group search-bar">
-                <div className="input-group-prepend">
-                    <button className="btn search-button" 
-                    type="button"><AiOutlineSearch/>
-                    </button>
+        <selection className="subhead d-flex flex-column   ">
+            <div className="input-group mb-3  subhead-input-container">
+                <div className="input-group-prepend d-flex">
+                    <span className="input-group-text" id="search"><AiOutlineSearch/></span>
                 </div>
-                <input type="text" className="form-control search-input" placeholder="Search for country"
-                aria-label="Example text with button addon" aria-describedby="button-addon1"/>
+                <input type="text" className="form-control subhead-input"
+                aria-describedby="inputGroup-sizing-default" htmlFor="search"/>
             </div>
-        </section>
+
+            <div className="select-container d-flex mt-4 m-lg-0 ">
+                <select class="form-select custom-select-lg mb-lg-3 select-option">
+                    <option selected>Filter by Region</option>
+                    <option value="1">Africa</option>
+                    <option value="2">America</option>
+                    <option value="3">Europe</option>
+                </select>
+            </div>
+        </selection>
     );
 }
  

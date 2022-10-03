@@ -16,56 +16,79 @@
     --White: hsl(0, 0%, 100%);
 }
 
-.main-page{
-    background-color: var(--Very-Light-Gray);
-}
-
 .head-container{
-    background-color: var(--White);
-    display: flex;
-    flex-direction: row;
-    border: 1px solid whitesmoke;
-}
-
-.head-container .head-sub-container{
-    padding: 1.3em 2em 1em 2em;
-    margin: 0px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 100%;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-}
-
-.head-container .head-sub-container h1{
-    font-weight: 800;
-    font-size: 1.4em;
-}
-
-
-.search-bar{
+    background-color:var(--White);
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    padding: 1em 1.5em 1em 1.5em;
+}
+
+.head-container h1{
+    font-size: 1.5em;
+    font-weight: 800;
+}
+
+.subhead{
+    padding: 1em 1.5em 1em 1.5em;
 
 }
 
-.search-container{
-    padding: 1em;
-    margin: 0em 1em 0em 1em;
+.subhead span{
+    background-color:white;
+    border-right: none;
 }
 
-.search-container .search-button{
-    background-color: var(--White);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.subhead-input{
+    height: 3em;
+    border-left: none;
+}
+
+.select-container{
     height: 3em;
 }
 
-.search-container .search-input{
-    background-color: var(--White);
-    border: none;
-    outline: none;
-    height: 3em;
-    font-weight: 600;
+.select-option{
+    width: 50%;
+    outline: none ;
+    padding: 0.5em;
 }
 
+
+
+
+
+@media only screen and (min-width: 600px) {
+
+
+    .head-container{
+        padding: 1em 3em 1em 3em;
+
+    }
+
+
+    .subhead{
+        display: inline-flex  !important;
+        flex-direction: row  !important;
+        width: 100%;
+        justify-content: space-between;
+        padding:2em 3em 2em 3em;
+
+    }
+
+    .subhead-input-container{
+        width: 30%;
+    }
+
+    .select-container{
+        height: auto;
+        width: 30% !important;
+        display: flex;
+        justify-content: flex-end;
+        padding-left: 1em;
+    }
+
+    .select-option{
+        width: 50%;
+    }
+
+
+}
