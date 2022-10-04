@@ -8,10 +8,10 @@
 }
 
 :root{
-    --Dark-Blue: hsl(209, 23%, 22%);
-    --Very-Dark-Blue: hsl(207, 26%, 17%);
+    --Dark-Blue: #2b3945;
+    --Very-Dark-Blue: #202c37;
     --Very-Dark-Blue-light: hsl(200, 15%, 8%);
-    --Dark-Gray-light-input: hsl(0, 0%, 52%);
+    --Dark-Gray-light-input: #858585;
     --Very-Light-Gray: hsl(0, 0%, 98%);
     --White: hsl(0, 0%, 100%);
 }
@@ -28,6 +28,17 @@
 
 #light .search-icon-background{
     background-color: var(--White);
+}
+
+#light .form-control::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color:black;
+    opacity: 1; /* Firefox */
+}
+
+
+#dark .form-control::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color:var(--White);
+    opacity: 1; /* Firefox */
 }
 
 #dark .head-background-color{
@@ -90,6 +101,12 @@
 
 
 
+#dark .form-select{
+    background-image: url('./images/white.svg');
+}
+
+
+/* placeholder */
 
 
 
