@@ -15,7 +15,7 @@ const Search = () => {
             </div>
 
             <div className="select-container d-flex mt-4 m-lg-0 ">
-                <select class="form-select custom-select-lg mb-lg-3 select-option head-background-color text-color">
+                <select className="form-select custom-select-lg mb-lg-3 select-option head-background-color text-color">
                     <option selected>Filter by Region</option>
                     <option value="1">Africa</option>
                     <option value="2">America</option>
