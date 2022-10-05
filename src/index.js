@@ -7,12 +7,13 @@ import reportWebVitals from './reportWebVitals';
 import { ThemeProvider } from './comp/context/ThemeContext';
 import { CountryProvider } from './comp/context/CountryContext';
 
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <ThemeProvider>
       <CountryProvider>
-        <App />
+        <App/>
       </CountryProvider>
     </ThemeProvider>
   </React.StrictMode>

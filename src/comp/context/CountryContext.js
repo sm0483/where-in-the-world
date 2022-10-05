@@ -5,6 +5,23 @@ const CountryContext=React.createContext();
 
 const CountryProvider=({children})=>{
     const [countryList,setCountryList]=useState([]);
+    const [sendList,setSendList]=useState([]);
+
+    const searchData=(data)=>{
+        const searchVar=data.toLowerCase();
+        setSendList(()=>{
+            const newList=countryList.filter((country)=>{
+                const common=country.name.common.toLowerCase();
+                const official=country.name.official.toLowerCase();
+                if(searchVar===common || official===searchVar){
+                    return country;
+                }
+                return null;
+            })
+
+            return newList;
+        })
+    }
 
     useEffect(()=>{
         const controller=new AbortController();
@@ -16,6 +33,7 @@ const CountryProvider=({children})=>{
                 .then((data)=>{
                     // console.log(data);
                     setCountryList(data);
+                    setSendList(data);
                 })
                 .catch((err)=>{
                     console.log(err);
@@ -30,7 +48,8 @@ const CountryProvider=({children})=>{
     return (
         <CountryContext.Provider
         value={{
-            countryList
+            sendList,
+            searchData
         }}
         >
             {children}

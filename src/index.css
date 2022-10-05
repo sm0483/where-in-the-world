@@ -16,6 +16,9 @@
     --White: hsl(0, 0%, 100%);
 }
 
+.main-page{
+    min-height: 100vh;
+}
 
 #light .background-color{
     background-color: var(--White);
@@ -170,6 +173,20 @@
     font-weight: 300;
 }
 
+::-webkit-scrollbar {
+    display: none;
+}
+
+form{
+    width: 100%;
+}
+
+.submit{
+    display: none;
+}
+
+
+
 
 @media only screen and (min-width: 698px) {
 
@@ -207,14 +224,13 @@
 
 
     .content-list{
-        padding:2em 2em 2em 2em;
+        padding:2em 5.2em 2em 5.2em;
     }
 
     .content{
-        justify-content: space-evenly;
-        row-gap: 3em;
-        column-gap: 3.5em;
-
+        justify-content: space-between;
+        row-gap: 2.5em;
+        column-gap: 3em;
     }
 
     .image-container{
