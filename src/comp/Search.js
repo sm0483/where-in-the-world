@@ -7,7 +7,7 @@ const Search = () => {
 
     const [searchParameter,setSearchParameter]=useState("");
 
-    const {searchData}=useCountry();
+    const {searchData,searchByRegion}=useCountry();
     
 
     const handleSumbit=(e)=>{
@@ -15,7 +15,10 @@ const Search = () => {
         searchData(searchParameter);
     }
 
-    // console.log(window.getSelection());
+
+    const getData=(e)=>{
+        searchByRegion(e.target.value);
+    }
 
     return (
         <selection className="subhead d-flex flex-column background-color">
@@ -33,7 +36,8 @@ const Search = () => {
             </div>
 
             <div className="select-container d-flex mt-4 m-lg-0 ">
-                <select className="form-select custom-select-lg mb-lg-3 select-option head-background-color text-color">
+                <select className="form-select custom-select-lg mb-lg-3 select-option head-background-color text-color" 
+                onChange={(e)=>getData(e)}>
                     <option selected>Filter by Region</option>
                     <option value="Africa">Africa</option>
                     <option value="Americas">The Americas</option>

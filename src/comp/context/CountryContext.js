@@ -6,6 +6,7 @@ const CountryContext=React.createContext();
 const CountryProvider=({children})=>{
     const [countryList,setCountryList]=useState([]);
     const [sendList,setSendList]=useState([]);
+    const [region,setRegion]=useState("");
 
     const searchData=(data)=>{
         const searchVar=data.toLowerCase();
@@ -21,6 +22,11 @@ const CountryProvider=({children})=>{
 
             return newList;
         })
+    }
+
+
+    const searchByRegion=(selectedRegion)=>{
+        setRegion(selectedRegion);
     }
 
     useEffect(()=>{
@@ -45,11 +51,32 @@ const CountryProvider=({children})=>{
 
     },[])
 
+
+    useEffect(()=>{
+        const controller =new AbortController();
+        const getRegion=(region)=>{
+            fetch(`https://restcountries.com/v3.1/region/${region}`,{signal:controller.signal})
+            .then(res=>res.json())
+            .then((data)=>{
+                setSendList(data);
+            })
+            .catch((err)=>{
+                console.log(err);
+            })
+        }
+
+        console.log(region);
+        region && getRegion(region)
+
+        return ()=>controller?.abort();
+    },[region])
+
     return (
         <CountryContext.Provider
         value={{
             sendList,
-            searchData
+            searchData,
+            searchByRegion
         }}
         >
             {children}
