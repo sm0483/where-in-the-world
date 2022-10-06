@@ -187,6 +187,98 @@ form{
 
 
 
+/* single county page */
+
+
+.hero{
+    padding: 2em 3em 3em 3em;
+}
+
+
+.hero img{
+    width: 100%;
+    height: 14em;
+    object-fit: cover;
+
+}
+
+.flag-image{
+    height: 14em;
+    padding: 0px;
+    width: 100%;
+    margin-top: 2.5em;
+}
+
+.hero-body{
+    padding: 0px;
+}
+
+.back-button{
+    background-color: green;
+    width: 8em;
+    margin: 0em 0em 2em 0em;
+    padding-left: 2em;
+    padding-right: 2em;
+    display: flex;
+    gap: 0.7em;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.country-details{
+    margin: 2em 0em 0em 0em;
+}
+
+.hero h2{
+    font-weight: 800;
+    font-size: 1.5em;
+    margin-bottom: 0.8em;
+}
+
+.country-details h3{
+    font-weight: 600;
+    font-size: 1.2em;
+}
+
+.country-details span{
+    font-size: 1em;
+    font-weight: 300;
+}
+
+.first-detail{
+ margin-bottom: 0.5em;   
+}
+
+.second-detail{
+    margin-top: 2em;
+    margin-bottom: 0.5em;
+}
+
+.border-box{
+    margin-top: 2em;
+}
+
+.border-box h3{
+    font-weight: 600;
+    font-size: 1.2em;
+}
+
+.border{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    row-gap: 0.4em;
+    column-gap: 0.4em;
+    width: 80%;
+}
+
+.border-box span{
+    border: 1px solid black;
+    padding:  0.1em 0.7em 0.1em 0.7em;
+    width: 4.5em;
+}
+
 
 @media only screen and (min-width: 698px) {
 
@@ -238,5 +330,23 @@ form{
     }
 
 
+    /* county-page */
+
+    .hero{
+        padding: 3em 5em 2em 5em;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .flag-image{
+        width: 30em;
+        height: 20em;
+    }
+
+    .hero img{
+        height: 20em;
+    }
+
+    
 
 }

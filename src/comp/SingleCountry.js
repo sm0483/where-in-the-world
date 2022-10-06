@@ -1,3 +1,5 @@
+import {HiArrowNarrowLeft} from 'react-icons/hi'
+
 const Single = (
     {information}
 ) => {
@@ -7,18 +9,17 @@ const Single = (
     const nativeCommon=nativeName.eng.common;
 
 
-    console.log(capital);
     
     return ( 
-        <div className="hero container">
-            <button className="btn btn-primary">Back</button>
+        <div className="hero container-fluid">
+            <button className="btn btn-primary back-button"><HiArrowNarrowLeft/>Back</button>
             <div className="hero-body">
                 <div className="flag-image">
-                    <img src={flag} alt="flag" className="" />
+                    <img src={flag} alt="flag" className="img-fluid" />
                 </div>
                 <div className="country-details">
-                    <h2>{common}</h2>
                     <div className="first-detail">
+                        <h2>{common}</h2>
                         <h3>Native Name:<span>{nativeCommon}</span></h3>
                         <h3>Population:<span>{population}</span></h3>
                         <h3>Region:<span>{region}</span></h3>
@@ -29,6 +30,7 @@ const Single = (
                             })
                         }</h3>
                     </div>
+
 
                     <div className="second-detail">
                         <h3>Top Level domain:<span>{internetDomain}</span></h3>
@@ -54,7 +56,7 @@ const Single = (
                         {
                             borders.map((value,index)=>{
                                 return (
-                                    <h2 key={index}>{value}</h2>
+                                    <span key={index}>{value}</span>
                                 )
                             })
                         }
