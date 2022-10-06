@@ -37,7 +37,7 @@ const CountryProvider=({children})=>{
                     return res.json();
                 })
                 .then((data)=>{
-                    // console.log(data);
+                    console.log(data);
                     setCountryList(data);
                     setSendList(data);
                 })
@@ -50,6 +50,8 @@ const CountryProvider=({children})=>{
         return ()=>controller?.abort();
 
     },[])
+
+
 
 
     useEffect(()=>{
@@ -65,18 +67,19 @@ const CountryProvider=({children})=>{
             })
         }
 
-        console.log(region);
         region && getRegion(region)
 
         return ()=>controller?.abort();
     },[region])
+
+
 
     return (
         <CountryContext.Provider
         value={{
             sendList,
             searchData,
-            searchByRegion
+            searchByRegion,            
         }}
         >
             {children}
