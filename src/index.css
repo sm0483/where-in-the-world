@@ -190,68 +190,23 @@ form{
 /* single county page */
 
 
-.hero{
-    padding: 2em 3em 3em 3em;
-}
-
-
-.hero img{
-    width: 100%;
-    height: 14em;
-    object-fit: cover;
-}
-
-.flag-image{
-    height: 15em;
-    padding: 0px;
-    width: 100%;
-}
-
-.hero-body{
-    padding: 3em 0em 0em 0em;
-}
 
 .back-button{
-    background-color: green;
-    width: 8em;
-    margin: 0em 0em 2em 0em;
-    padding-left: 2em;
-    padding-right: 2em;
+    width: 7em;
+    margin: 0em 0em 0em 0.1em;
     display: flex;
-    gap: 0.7em;
     align-items: center;
-    justify-content: center;
+    justify-content:space-around;
+    height: 2em;
+    padding: 0em 1.2em 0em 1.2em;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
 }
 
-
-.country-details{
-    margin: 2em 0em 0em 0em;
+.hero-container{
+    min-height: 100vh;
+    padding-top: 2.8em !important;
 }
 
-.hero h2{
-    font-weight: 800;
-    font-size: 1.5em;
-    margin-bottom: 0.8em;
-}
-
-.country-details h3{
-    font-weight: 600;
-    font-size: 1.2em;
-}
-
-.country-details span{
-    font-size: 1em;
-    font-weight: 300;
-}
-
-.first-detail{
- margin-bottom: 0.5em;   
-}
-
-.second-detail{
-    margin-top: 2em;
-    margin-bottom: 0.5em;
-}
 
 .border-box{
     margin-top: 2em;
@@ -272,10 +227,35 @@ form{
 }
 
 .border-box span{
-    border: 1px solid black;
     padding:  0.1em 0.7em 0.1em 0.7em;
     width: 4.5em;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
+
+.main-detail h3{
+    font-weight: 600;
+    font-size: 1.2em;
+}
+
+.main-detail span{
+    font-size: 1em;
+    font-weight: 300;
+}
+
+.hero-container h2{
+    font-weight: 800;
+    font-size: 1.5em;
+    margin-bottom: 0.8em;
+}
+
+.main-container{
+    padding-top: 4em!important;
+}
+
+.second-detail{
+    margin-top: 1em;
+}
+
 
 
 @media only screen and (min-width: 698px) {
@@ -330,52 +310,8 @@ form{
 
     /* county-page */
 
-    .hero{
-        padding: 3em 5em 2em 5em;
-        display: flex;
-        flex-direction: column;
-    }
-
-    .flag-image{
-        width: 34em;
-        height: 24em;
-    }
-
-    .hero img{
-        height: 24em;
-        width: 100%;
-    }
-
-    .hero-body{
-        display: flex;
-        flex-direction: row;
-        /* background-color:antiquewhite ; */
-        column-gap: 12em;
-        padding: 0em 1em 1em 0em;
-        align-items: center;
-
-    }
-
-
-    .main-details{
-        display: flex;
-        flex-direction: row;
-        /* background-color: aquamarine; */
-        column-gap: 10em;
-    }
-
-    .country-details{
-            /* background-color: beige; */
-            padding: 5em 1em 8em 1em;
-    }
-
-    .first-detail{
-        /* background-color: aliceblue; */
-    }
-
-    .second-detail{
-        /* background-color: brown; */
-        padding: 1em 0.45em 1em 0.45em;        
+    .back-button{
+        margin-top: 3em;
     }
 
     .border-box{
@@ -385,6 +321,38 @@ form{
     .border-content{
         width: 100%;
         
+    }
+
+    .hero-container{
+        padding: 2em 5em 2em 5em !important;
+    }
+
+    .main-container{
+        padding-top: 7em !important;
+    }
+
+    .flag-container{
+        width: 600px;
+        height: 600px;
+    }
+
+    .detail-container{
+        /* background-color: aliceblue; */
+        padding: 3em 4em 0em 8em!important;
+        /* border: 1px solid black; */
+    }
+
+    .main-detail{
+        /* background-color: yellow; */
+    }
+
+    .second-detail{
+        padding-top: 2em;
+        padding-left: 2em;
+    }
+
+    .border-box{
+        margin: 0px;
     }
 
 
