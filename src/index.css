@@ -199,18 +199,16 @@ form{
     width: 100%;
     height: 14em;
     object-fit: cover;
-
 }
 
 .flag-image{
-    height: 14em;
+    height: 15em;
     padding: 0px;
     width: 100%;
-    margin-top: 2.5em;
 }
 
 .hero-body{
-    padding: 0px;
+    padding: 3em 0em 0em 0em;
 }
 
 .back-button{
@@ -264,7 +262,7 @@ form{
     font-size: 1.2em;
 }
 
-.border{
+.border-content{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -339,14 +337,56 @@ form{
     }
 
     .flag-image{
-        width: 30em;
-        height: 20em;
+        width: 34em;
+        height: 24em;
     }
 
     .hero img{
-        height: 20em;
+        height: 24em;
+        width: 100%;
     }
 
-    
+    .hero-body{
+        display: flex;
+        flex-direction: row;
+        /* background-color:antiquewhite ; */
+        column-gap: 12em;
+        padding: 0em 1em 1em 0em;
+        align-items: center;
+
+    }
+
+
+    .main-details{
+        display: flex;
+        flex-direction: row;
+        /* background-color: aquamarine; */
+        column-gap: 10em;
+    }
+
+    .country-details{
+            /* background-color: beige; */
+            padding: 5em 1em 8em 1em;
+    }
+
+    .first-detail{
+        /* background-color: aliceblue; */
+    }
+
+    .second-detail{
+        /* background-color: brown; */
+        padding: 1em 0.45em 1em 0.45em;        
+    }
+
+    .border-box{
+        padding-top: 3em;
+    }
+
+    .border-content{
+        width: 100%;
+        
+    }
+
+
 
 }

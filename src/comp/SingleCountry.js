@@ -14,10 +14,11 @@ const Single = (
         <div className="hero container-fluid">
             <button className="btn btn-primary back-button"><HiArrowNarrowLeft/>Back</button>
             <div className="hero-body">
-                <div className="flag-image">
+                <div className="flag-image img-fluid">
                     <img src={flag} alt="flag" className="img-fluid" />
                 </div>
                 <div className="country-details">
+                    <div className="main-details">
                     <div className="first-detail">
                         <h2>{common}</h2>
                         <h3>Native Name:<span>{nativeCommon}</span></h3>
@@ -48,11 +49,11 @@ const Single = (
                             })
                             }</h3>
                     </div>
+                </div> 
 
-                </div>
                 <div className="border-box">
                     <h3>Border Countries</h3>
-                    <div className="border">
+                    <div className="border-content">
                         {
                             borders.map((value,index)=>{
                                 return (
@@ -64,6 +65,8 @@ const Single = (
                 </div>
             </div>
         </div>
+    </div>
+
     );
 }
  
