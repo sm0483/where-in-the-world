@@ -39,7 +39,7 @@ const Country = () => {
 
     const information={languages,population,common,flag,nativeName,internetDomain,currencies,region,subRegion,capital,borders}
     return ( 
-        <div className="main-page background-color">
+        <div className="main-page">
             <Head/>
             <Single information={information}/>
         </div>
