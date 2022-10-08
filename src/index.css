@@ -7,6 +7,11 @@
    box-sizing: border-box;
 }
 
+
+/* body{
+    background-color: aqua;
+} */
+
 :root{
     --Dark-Blue: #2b3945;
     --Very-Dark-Blue: #202c37;
@@ -316,12 +321,13 @@ form{
 
     .content-list{
         padding:2em 5.2em 2em 5.2em;
+
     }
 
     .content{
-        justify-content: space-between;
+        justify-content: flex-start;
         row-gap: 2.5em;
-        column-gap: 3em;
+        column-gap: 7em;
     }
 
     .image-container{
@@ -360,9 +366,9 @@ form{
         /* border: 1px solid black; */
     }
 
-    .main-detail{
-        /* background-color: yellow; */
-    }
+    /* .main-detail{
+         background-color: yellow; 
+    } */
 
     .second-detail{
         padding-top: 2em;

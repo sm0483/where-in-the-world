@@ -8,9 +8,17 @@ import Head from "./comp/Head";
 
 function App() {
   const {theme}=useTheme();
+
+  //find the main htmlElement add id dark or light
+  const htmlElement=document.querySelector('html');
+  htmlElement.setAttribute('id',`${theme}`);
   
+  //find the body element and add background class to it
+  const bodyElement=document.querySelector('body');
+  bodyElement.classList.add("background-color");
+
   return (
-    <main id={theme}>
+    <main>
       <Router>
       <Head/>
         <Routes>

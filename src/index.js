@@ -4,11 +4,13 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { ThemeProvider } from './comp/context/ThemeContext';
+import { ThemeProvider, } from './comp/context/ThemeContext';
 import { CountryProvider } from './comp/context/CountryContext';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
+
 root.render(
   <React.StrictMode>
     <ThemeProvider>

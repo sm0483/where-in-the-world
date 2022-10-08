@@ -9,7 +9,6 @@ const Single = (
         currencies,region,subRegion,capital,borders,flag,population,languages}=information;
 
     let nativeCommon=undefined;    
-    console.log(nativeName+"cat fish");   
     
     if(nativeName){
         const array=Object.values(nativeName);
@@ -47,7 +46,7 @@ const Single = (
                             <h3>Currencies : {
                                 currencies ?
                                 Object.values(currencies).map((value,index)=>{
-                                    return(<span>{value.name}</span>)
+                                    return(<span key={index}>{value.name}</span>)
                                 }) : <span>None</span>                        
                                 }</h3>
                             <h3>Languages : {

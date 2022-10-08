@@ -17,7 +17,6 @@ const Search = () => {
 
 
     const getData=(e)=>{
-        console.log(e.target.value +"cat");
         if(e.target.value==="Filter by Region"){
             loadItem();
             return;
@@ -43,7 +42,7 @@ const Search = () => {
             <div className="select-container d-flex mt-4 m-lg-0 ">
                 <select className="form-select custom-select-lg mb-lg-3 select-option head-background-color text-color" 
                 onChange={(e)=>getData(e)}>
-                    <option selected>Filter by Region</option>
+                    <option value="Filter by Region">Filter by Region</option>
                     <option value="Africa">Africa</option>
                     <option value="Americas">The Americas</option>
                     <option value="Asia">Asia</option>
