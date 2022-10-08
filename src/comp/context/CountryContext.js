@@ -7,6 +7,11 @@ const CountryProvider=({children})=>{
     const [countryList,setCountryList]=useState([]);
     const [sendList,setSendList]=useState([]);
     const [region,setRegion]=useState("");
+    const [load,setLoad]=useState(true);
+
+    const loadItem=()=>{
+        setLoad(!load);
+    }
 
     const searchData=(data)=>{
         const searchVar=data.toLowerCase();
@@ -49,7 +54,7 @@ const CountryProvider=({children})=>{
         getList();
         return ()=>controller?.abort();
 
-    },[])
+    },[load])
 
 
 
@@ -79,7 +84,8 @@ const CountryProvider=({children})=>{
         value={{
             sendList,
             searchData,
-            searchByRegion,            
+            searchByRegion,
+            loadItem,            
         }}
         >
             {children}

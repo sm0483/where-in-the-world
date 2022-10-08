@@ -7,7 +7,7 @@ const Search = () => {
 
     const [searchParameter,setSearchParameter]=useState("");
 
-    const {searchData,searchByRegion}=useCountry();
+    const {searchData,searchByRegion,loadItem}=useCountry();
     
 
     const handleSumbit=(e)=>{
@@ -17,6 +17,11 @@ const Search = () => {
 
 
     const getData=(e)=>{
+        console.log(e.target.value +"cat");
+        if(e.target.value==="Filter by Region"){
+            loadItem();
+            return;
+        }
         searchByRegion(e.target.value);
     }
 

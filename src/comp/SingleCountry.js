@@ -8,8 +8,15 @@ const Single = (
     const {common,nativeName,internetDomain,
         currencies,region,subRegion,capital,borders,flag,population,languages}=information;
 
-    const array=Object.values(nativeName);
-    const nativeCommon=array[0].common;
+    let nativeCommon=undefined;    
+    console.log(nativeName+"cat fish");   
+    
+    if(nativeName){
+        const array=Object.values(nativeName);
+        nativeCommon=array[0].common;
+    }else{
+        nativeCommon=common;
+    }
 
     
     return (
@@ -23,33 +30,34 @@ const Single = (
                     <div className="main-detail row">
                         <div className="first-detail col-lg-6 ">
                             <h2 >{common}</h2>
-                            <h3 >Native Name :<span>{nativeCommon}</span></h3>
-                            <h3>Population :<span>{population}</span></h3>
-                            <h3>Region :<span>{region}</span></h3>
-                            <h3>Sub Region :<span>{subRegion}</span></h3>
-                            <h3>Capital :{
+                            <h3 >Native Name : <span>{nativeCommon ? nativeCommon : "None"}</span></h3>
+                            <h3>Population : <span>{population ? population :"None"}</span></h3>
+                            <h3>Region : <span>{region}</span></h3>
+                            <h3>Sub Region : <span>{subRegion ? subRegion : "None"}</span></h3>
+                            <h3>Capital : {
+                                capital ?
                                 capital.map((value,index)=>{
                                     return <span key={index}>{value}</span>
-                                })
+                                }) :<span>None</span>
                             }</h3>
                         </div>
 
                         <div className="second-detail col-lg-6">
-                            <h3>Top Level domain :<span>{internetDomain}</span></h3>
-                            <h3>Currencies :{
-                                currencies &&
+                            <h3>Top Level domain : <span>{internetDomain ? internetDomain : "None"}</span></h3>
+                            <h3>Currencies : {
+                                currencies ?
                                 Object.values(currencies).map((value,index)=>{
                                     return(<span>{value.name}</span>)
-                                })                        
+                                }) : <span>None</span>                        
                                 }</h3>
-                            <h3>Languages :{
-                                languages && 
+                            <h3>Languages : {
+                                languages ?
                                 Object.values(languages).map((value,index)=>{
                                     // console.log(value,index);
                                     return(
                                         <span key={index}>{value},</span>
-                                    )
-                                })
+                                    ) 
+                                }) : <span>None</span>
                                 }</h3>        
                         </div>
                     </div>
