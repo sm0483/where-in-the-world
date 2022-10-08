@@ -1,4 +1,3 @@
-import Head from "./Head";
 import Search from "./Search";
 import List from "./List";
 
@@ -6,7 +5,7 @@ const Main = () => {
 
     return (
         <div className="main-page background-color">
-            <Head/>
+            {/* <Head/> */}
             <Search/>
             <List/>
         </div>

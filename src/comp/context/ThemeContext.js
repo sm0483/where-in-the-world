@@ -1,10 +1,11 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 
 const ThemeContext=React.createContext();
 
 
 const ThemeProvider=({children})=>{
     const [theme,setTheme]=useState("light");
+    
     const changeTheme=()=>{
         let newTheme=undefined;
         setTheme((currentTheme)=>{
@@ -19,6 +20,7 @@ const ThemeProvider=({children})=>{
         })
 
     }
+
 
     return(
         <ThemeContext.Provider

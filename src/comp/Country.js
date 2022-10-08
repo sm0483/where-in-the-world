@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import Head from "./Head";
 import Single from "./SingleCountry";
 
 
@@ -40,7 +39,7 @@ const Country = () => {
     const information={languages,population,common,flag,nativeName,internetDomain,currencies,region,subRegion,capital,borders}
     return ( 
         <div className="main-page">
-            <Head/>
+            {/* <Head/> */}
             <Single information={information}/>
         </div>
     );

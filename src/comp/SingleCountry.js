@@ -1,4 +1,5 @@
 import {HiArrowNarrowLeft} from 'react-icons/hi'
+import { Link } from 'react-router-dom';
 
 const Single = (
     {information}
@@ -13,7 +14,7 @@ const Single = (
     
     return (
         <div className="hero-container container-fluid p-4 background-color">
-            <button className="btn  back-button text-color head-background-color"><HiArrowNarrowLeft/>Back</button>
+            <Link to={'/'} className="btn  back-button text-color head-background-color"><HiArrowNarrowLeft/>Back</Link>
             <div className="main-container pt-5 row d-flex  .align-items-center">
                 <div className="flag-container col-lg-6 text-center text-lg-start">
                     <img className='img-fluid' src={flag} alt="flag"  />
