@@ -16,8 +16,8 @@ const Single = (
         <div className="hero-container container-fluid p-4 background-color">
             <Link to={'/'} className="btn  back-button text-color head-background-color"><HiArrowNarrowLeft/>Back</Link>
             <div className="main-container pt-5 row d-flex  .align-items-center">
-                <div className="flag-container col-lg-6 text-center text-lg-start">
-                    <img className='img-fluid' src={flag} alt="flag"  />
+                <div className="flag-container col-lg-4 text-center text-lg-start">
+                    <img className='flag-image' src={flag} alt="flag"  />
                 </div>
                 <div className="detail-container col-lg-6 py-4 text-color">
                     <div className="main-detail row">
