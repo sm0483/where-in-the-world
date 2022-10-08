@@ -37,11 +37,13 @@ const Single = (
                         <div className="second-detail col-lg-6">
                             <h3>Top Level domain :<span>{internetDomain}</span></h3>
                             <h3>Currencies :{
+                                currencies &&
                                 Object.values(currencies).map((value,index)=>{
                                     return(<span>{value.name}</span>)
                                 })                        
                                 }</h3>
                             <h3>Languages :{
+                                languages && 
                                 Object.values(languages).map((value,index)=>{
                                     // console.log(value,index);
                                     return(
@@ -55,12 +57,12 @@ const Single = (
                     <div className="border-box">
                         <h3>Border Countries</h3>
                         <div className="border-content">
-                            {
+                            { borders ?
                                 borders.map((value,index)=>{
                                     return (
                                         <span key={index}>{value}</span>
                                     )
-                                })
+                                }) :<span>None</span>
                             }
                         </div>
                     </div>

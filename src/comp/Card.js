@@ -1,6 +1,13 @@
-const Card = ({name,region,flags,capital,population}) => {
+import { useNavigate } from "react-router-dom";
+
+const Card = ({name,region,flags,capital,population,cca3}) => {
+    const navigate=useNavigate();
+    const setNaviagation=(id)=>{
+        navigate(`${id}`)
+    }
+
     return (
-        <div className="custom-card head-background-color">
+        <div className="custom-card head-background-color" onClick={()=>setNaviagation(cca3)}>
             <div className="image-container">
                     <img className="card-image" src={flags.svg} alt="flag"/>
             </div>
