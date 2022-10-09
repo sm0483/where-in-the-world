@@ -1,5 +1,5 @@
-import Search from "./Search";
-import List from "./List";
+import Search from "./main/Search";
+import List from "./main/List";
 
 const Main = () => {
 

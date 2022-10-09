@@ -1,5 +1,5 @@
 import Card from './Card';
-import { useCountry } from './context/CountryContext';
+import { useCountry } from '../context/CountryContext';
 
 const List = () => {
     const {sendList}=useCountry();

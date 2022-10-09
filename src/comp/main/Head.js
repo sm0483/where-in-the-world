@@ -1,5 +1,5 @@
 import Switch from 'react-switch'
-import {useTheme} from './context/ThemeContext'
+import {useTheme} from '../context/ThemeContext'
 
 
 const Head = () => {

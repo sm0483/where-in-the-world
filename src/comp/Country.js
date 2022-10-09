@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import Single from "./SingleCountry";
+import Single from "./country/SingleCountry";
 
 
 

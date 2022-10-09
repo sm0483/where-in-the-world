@@ -1,6 +1,6 @@
 import {  useState } from 'react';
 import {AiOutlineSearch} from 'react-icons/ai'
-import { useCountry } from './context/CountryContext';
+import { useCountry } from '../context/CountryContext';
 
 
 const Search = () => {
