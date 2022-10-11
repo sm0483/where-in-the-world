@@ -1,12 +1,21 @@
 import Card from './Card';
 import { useCountry } from '../context/CountryContext';
 import NoData from '../notfound/NoData';
+import Load from '../load/Load';
 
 const List = () => {
     const {sendList,searchParameter}=useCountry();
     console.log(sendList.length);
 
-    if(sendList.length===0){
+    if(sendList.length===0 && !searchParameter){
+        return (
+            <div className="loading-page loading-padd">
+                <Load/>
+            </div>
+        )
+    }
+
+    if(sendList.length===0 && searchParameter){
         return (
             <div className="content-list background-color nodata-page">
                 <NoData searchParameter={searchParameter}/>
