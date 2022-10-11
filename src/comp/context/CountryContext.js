@@ -7,7 +7,11 @@ const CountryProvider=({children})=>{
     const [countryList,setCountryList]=useState([]);
     const [sendList,setSendList]=useState([]);
     const [region,setRegion]=useState("");
-    const [load,setLoad]=useState(true);
+    const [load,setLoad]=useState(false);
+
+
+    //load
+
 
     const loadItem=()=>{
         setLoad(!load);
@@ -86,6 +90,7 @@ const CountryProvider=({children})=>{
             searchData,
             searchByRegion,
             loadItem,            
+            
         }}
         >
             {children}

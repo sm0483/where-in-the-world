@@ -1,7 +1,7 @@
-const Image = () => {
-    return (
+// const Image = () => {
+//     return (
         
-    );
-}
+//     );
+// }
  
-export default Image;
+// export default Image;

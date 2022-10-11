@@ -18,7 +18,7 @@
     --Very-Dark-Blue-light: hsl(200, 15%, 8%);
     --Dark-Gray-light-input: #858585;
     --Very-Light-Gray: hsl(0, 0%, 98%);
-    --White: hsl(0, 0%, 100%);
+    --White: #ffffff;
 }
 
 .main-page{
@@ -284,6 +284,22 @@ form{
     
 }
 
+.loading-page{
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    min-height: 100vh;
+    padding-top: 10em;
+}
+
+.loading{
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 @media only screen and (min-width: 698px) {
 
 
@@ -381,6 +397,10 @@ form{
 
     .flag-container{
         height: 400px;
+    }
+
+    .loading-page{
+        padding-top: 20em;
     }
 
 

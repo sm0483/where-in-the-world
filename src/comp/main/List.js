@@ -2,7 +2,8 @@ import Card from './Card';
 import { useCountry } from '../context/CountryContext';
 
 const List = () => {
-    const {sendList}=useCountry();
+    const {sendList,}=useCountry();
+
 
     return (
         <section className="content-list background-color">

@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 const Card = ({name,region,flags,capital,population,cca3}) => {
     const navigate=useNavigate();
     const setNaviagation=(id)=>{
-        navigate(`${id}`)
+        navigate(`${id.toLowerCase()}`)
     }
 
     return (
