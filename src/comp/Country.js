@@ -15,11 +15,20 @@ const Country = () => {
     const [nodata,setNodata]=useState(false);
 
 
-    const notFound=(data)=>{
+    const handleNotFound=(data)=>{
         if(data.message==="Not Found"){
             setNodata(true);
             return true;
         }
+        return false;
+    }
+
+    const handleBadRequest=(data)=>{
+        if(data.message==="Bad Request"){
+            setNodata(true);
+            return true;
+        }
+
         return false;
     }
 
@@ -34,17 +43,22 @@ const Country = () => {
                     setErr(true);
                     return;
                 }
-                if(notFound(data)){
+                if(handleNotFound(data)){
+                    return;
+                }
+
+                if(handleBadRequest(data)){
                     return;
                 }
 
                 setDetails(data);
                 setNodata(false);
-                console.log(data);
+                // console.log(data);
                 setLoadCountry(false);
             })
             .catch((err)=>{
-                console.log("cat"+err);
+                // setErr(true);
+                // console.log("cat"+err);
             })
         }
 

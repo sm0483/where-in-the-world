@@ -39,7 +39,7 @@ const CountryProvider=({children})=>{
                     return res.json();
                 })
                 .then((data)=>{
-                    console.log(data);
+                    // console.log(data);
                     if(PageNotFound(data)){
                         setErr(true);
                         return;
@@ -48,10 +48,11 @@ const CountryProvider=({children})=>{
                     setSendList(data);
                 })
                 .catch((err)=>{
-                    console.log(err.message);
+                    // console.log(err.message);
                     checkErr(err,setInernet);
                     checkErr(err,setErr);
-                    console.log("err"+err);
+                    // setErr(true);
+                    // console.log("err"+err);
                 })
         }
 
@@ -76,7 +77,8 @@ const CountryProvider=({children})=>{
                 setSendList(data);
             })
             .catch((err)=>{
-                console.log(err);
+                // console.log(err);
+                // setErr(true)
             })
         }
 
