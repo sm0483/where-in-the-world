@@ -11,7 +11,6 @@ const CountryProvider=({children})=>{
     const [load,setLoad]=useState(false);
 
 
-    //load
 
 
     const loadItem=()=>{
@@ -20,18 +19,6 @@ const CountryProvider=({children})=>{
 
     const searchData=(data)=>{
         const searchVar=data.toLowerCase();
-        // setSendList(()=>{
-        //     const newList=countryList.filter((country)=>{
-        //         const common=country.name.common.toLowerCase();
-        //         const official=country.name.official.toLowerCase();
-        //         if(searchVar===common || official===searchVar){
-        //             return country;
-        //         }
-        //         return null;
-        //     })
-
-        //     return newList;
-        // })
         setSendList(()=>{
             const newList=searchCountry(countryList,searchVar);
             return newList;

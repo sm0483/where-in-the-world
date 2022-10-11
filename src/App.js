@@ -3,6 +3,7 @@ import Main from "./comp/Main";
 import {BrowserRouter as Router, Routes,Route,} from 'react-router-dom'
 import Country from './comp/Country'
 import Head from "./comp/main/Head";
+import NotFound from "./comp/notfound/NoteFound";
 
 
 
@@ -27,6 +28,7 @@ function App() {
           element={
               <Country/>
           }/>
+          <Route path="*" element={<NotFound/>}/>
         </Routes>  
       </Router>
     </main>
