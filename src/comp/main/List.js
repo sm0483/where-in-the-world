@@ -1,8 +1,18 @@
 import Card from './Card';
 import { useCountry } from '../context/CountryContext';
+import NoData from '../notfound/NoData';
 
 const List = () => {
-    const {sendList,}=useCountry();
+    const {sendList,searchParameter}=useCountry();
+    console.log(sendList.length);
+
+    if(sendList.length===0){
+        return (
+            <div className="content-list background-color nodata-page">
+                <NoData searchParameter={searchParameter}/>
+            </div>
+        )
+    }
 
 
     return (

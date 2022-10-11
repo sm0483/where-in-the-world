@@ -38,6 +38,8 @@ const Country = () => {
             )
     }
 
+    
+
     if(details.length!==0){
 
     const {name:countryNames, population,

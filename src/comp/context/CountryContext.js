@@ -9,8 +9,7 @@ const CountryProvider=({children})=>{
     const [sendList,setSendList]=useState([]);
     const [region,setRegion]=useState("");
     const [load,setLoad]=useState(false);
-
-
+    const [searchParameter,setSearchParameter]=useState("");
 
 
     const loadItem=()=>{
@@ -18,11 +17,11 @@ const CountryProvider=({children})=>{
     }
 
     const searchData=(data)=>{
+        setSearchParameter(data);
         const searchVar=data.toLowerCase();
-        setSendList(()=>{
-            const newList=searchCountry(countryList,searchVar);
-            return newList;
-        })
+        const newList=searchCountry(countryList,searchVar);
+        setSendList(newList);
+        
     }
 
 
@@ -81,7 +80,8 @@ const CountryProvider=({children})=>{
             sendList,
             searchData,
             searchByRegion,
-            loadItem,            
+            loadItem,  
+            searchParameter  
             
         }}
         >
