@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
-import searchCountry from "./helper/Search";
+import {searchCountry,checkErr,PageNotFound} from "./helper/Search";
 
 const CountryContext=React.createContext();
 
@@ -10,6 +10,8 @@ const CountryProvider=({children})=>{
     const [region,setRegion]=useState("");
     const [load,setLoad]=useState(false);
     const [searchParameter,setSearchParameter]=useState("");
+    const [internet,setInernet]=useState(false);
+    const [err,setErr]=useState(false);
 
 
     const loadItem=()=>{
@@ -38,11 +40,18 @@ const CountryProvider=({children})=>{
                 })
                 .then((data)=>{
                     console.log(data);
+                    if(PageNotFound(data)){
+                        setErr(true);
+                        return;
+                    }
                     setCountryList(data);
                     setSendList(data);
                 })
                 .catch((err)=>{
-                    console.log(err);
+                    console.log(err.message);
+                    checkErr(err,setInernet);
+                    checkErr(err,setErr);
+                    console.log("err"+err);
                 })
         }
 
@@ -60,6 +69,10 @@ const CountryProvider=({children})=>{
             fetch(`https://restcountries.com/v3.1/region/${region}`,{signal:controller.signal})
             .then(res=>res.json())
             .then((data)=>{
+                if(PageNotFound(data)){
+                    setErr(true);
+                    return;
+                }
                 setSendList(data);
             })
             .catch((err)=>{
@@ -81,7 +94,9 @@ const CountryProvider=({children})=>{
             searchData,
             searchByRegion,
             loadItem,  
-            searchParameter  
+            searchParameter,
+            internet,
+            err
             
         }}
         >

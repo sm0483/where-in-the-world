@@ -1,4 +1,6 @@
-const NoData = ({searchParameter}) => {
+import { Link } from "react-router-dom";
+
+const NoData = ({searchParameter,secondPage=false}) => {
     return (
         <div className="nodata">
             <h2 className="text-color">Hmmm...</h2>
@@ -6,6 +8,9 @@ const NoData = ({searchParameter}) => {
             <p className="text-color">
                 Double check your search for any typos or spelling errors -or try different search term.
             </p>
+            { secondPage && 
+            <Link className=" btn home-link head-background-color text-color" to="/">Home</Link>
+            }
         </div>
     );
 }

@@ -2,10 +2,25 @@ import Card from './Card';
 import { useCountry } from '../context/CountryContext';
 import NoData from '../notfound/NoData';
 import Load from '../load/Load';
+import Err from '../notfound/Err';
 
 const List = () => {
-    const {sendList,searchParameter}=useCountry();
-    console.log(sendList.length);
+    const {sendList,searchParameter,internet,err}=useCountry();
+
+
+
+    if(err){
+        return(<Err/>)
+    }
+
+    if(internet){
+        return (
+            <div className="notfound text-color">
+                <h3>No Internet</h3>
+            </div>
+        )
+    }
+
 
     if(sendList.length===0 && !searchParameter){
         return (

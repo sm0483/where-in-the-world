@@ -12,4 +12,21 @@ const searchCountry=(countryList,search)=>{
     return newList;
 }
 
-export default searchCountry;
+
+
+const checkErr=(err,setState)=>{
+    if(err.message==="Failed to fetch"){
+        setState(true);
+    }
+    console.log(err.message);
+
+
+}
+
+const PageNotFound=(data)=>{
+    if(data.message==="Page Not Found"){
+        return true;
+    }
+}
+
+export  {searchCountry,checkErr,PageNotFound};

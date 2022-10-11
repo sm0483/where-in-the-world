@@ -2,12 +2,26 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Single from "./country/SingleCountry";
 import Load from './load/Load'
+import { PageNotFound } from "./context/helper/Search";
+import Err from "./notfound/Err";
+import NoData from '../comp/notfound/NoData';
 
 
 const Country = () => {
     const {id}=useParams();
     const [details,setDetails]=useState([]);
     const [loadCountry,setLoadCountry]=useState(false);
+    const [err,setErr]=useState(false);
+    const [nodata,setNodata]=useState(false);
+
+
+    const notFound=(data)=>{
+        if(data.message==="Not Found"){
+            setNodata(true);
+            return true;
+        }
+        return false;
+    }
 
     useEffect(()=>{
         const controller=new AbortController();
@@ -16,12 +30,21 @@ const Country = () => {
             fetch(`https://restcountries.com/v3.1/alpha?codes=${countryId}`,{signal:controller.signal})
             .then(res=>res.json())
             .then((data)=>{
+                if(PageNotFound(data)){
+                    setErr(true);
+                    return;
+                }
+                if(notFound(data)){
+                    return;
+                }
+
                 setDetails(data);
+                setNodata(false);
                 console.log(data);
                 setLoadCountry(false);
             })
             .catch((err)=>{
-                console.log(err);
+                console.log("cat"+err);
             })
         }
 
@@ -29,6 +52,22 @@ const Country = () => {
 
         return ()=>controller?.abort();
     },[])
+
+
+    if(err){
+        return(<Err/>)
+    }
+
+
+    if(nodata){
+        return (
+            <div className="content-list background-color nodata-page">
+                <NoData searchParameter={id} secondPage={true}/>
+            </div>
+        )
+    }
+
+
 
     if(loadCountry){
         return(
@@ -38,7 +77,8 @@ const Country = () => {
             )
     }
 
-    
+
+
 
     if(details.length!==0){
 
