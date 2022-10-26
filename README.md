@@ -25,19 +25,19 @@
 <br>
 
 
-<img src='/home/user/Desktop/r/rest-app/assets/light-main.png' height="500" >
+<img src='./assets/light-main.png' height="500" width="850" >
 
 <br>
 
-<img src='/home/user/Desktop/r/rest-app/assets/dark-main.png' height="500" >
+<img src='./assets/dark-main.png' height="500" width="850"  >
 
 <br>
 
-<img src='/home/user/Desktop/r/rest-app/assets/light-details.png' height="500" >
+<img src='./assets/light-details.png' height="500" width="850"  >
 
 <br>
 
-<img src='/home/user/Desktop/r/rest-app/assets/dark-detail.png' height="500" >
+<img src='./assets/dark-detail.png' height="500"  width="850" >
 
 
 
