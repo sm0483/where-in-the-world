@@ -15,12 +15,6 @@
 
 
 
-# Tech
-
-- React js
-- Lottie-web animation
-- REST Countries Api
-
 
 <br>
 
@@ -38,6 +32,15 @@
 <br>
 
 <img src='./assets/dark-detail.png' height="500"  width="850" >
+
+
+
+# Tech
+
+- React js
+- Lottie-web animation
+- REST Countries Api
+
 
 
 
